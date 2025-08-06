@@ -1,0 +1,74 @@
+[
+  {
+    "ContainingType": "ElectionApi.Controllers.CandidateController",
+    "Method": "Get",
+    "RelativePath": "candidates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElectionApi.Controllers.CandidateController",
+    "Method": "PerHours",
+    "RelativePath": "candidates/stats/perHours",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElectionApi.Controllers.CandidateController",
+    "Method": "PerMinutes",
+    "RelativePath": "candidates/stats/perMinutes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElectionApi.Controllers.OfficeController",
+    "Method": "Get",
+    "RelativePath": "offices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElectionApi.Controllers.OfficeController",
+    "Method": "Post",
+    "RelativePath": "offices",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ElectionApi.ViewModels.AddOfficeViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElectionApi.Controllers.VoteController",
+    "Method": "Post",
+    "RelativePath": "votes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ElectionApi.ViewModels.AddVoteViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
