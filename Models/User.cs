@@ -12,6 +12,12 @@ namespace ElectionApi.Models
         public bool IsActive { get; set; } = true;
         public DateTime? LastLoginAt { get; set; }
         
+        // Profile Properties
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Phone { get; set; }
+        public string? Avatar { get; set; }
+        
         // 2FA Properties
         public bool TwoFactorEnabled { get; set; } = false;
         public string? TwoFactorCode { get; set; }
