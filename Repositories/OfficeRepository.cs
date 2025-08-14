@@ -5,7 +5,7 @@ namespace ElectionApi.Repositories
 {
     public class OfficeRepository : Repository<Office>, IOfficeRepository
     {
-        public OfficeRepository(IMongoDatabase database) : base(database)
+        public OfficeRepository(IMongoContext context) : base(context.Database)
         {
         }
     }

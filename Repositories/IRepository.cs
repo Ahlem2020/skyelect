@@ -74,5 +74,12 @@ namespace ElectionApi.Repositories
             int skipSize = 0,
             int limitSize = 30
             );
+
+        // Convenience methods for CRUD operations
+        Task<IEnumerable<TDocument>> GetAllAsync();
+        Task<TDocument?> GetByIdAsync(string id);
+        Task CreateAsync(TDocument document);
+        Task UpdateAsync(TDocument document);
+        Task DeleteAsync(string id);
     }
 }

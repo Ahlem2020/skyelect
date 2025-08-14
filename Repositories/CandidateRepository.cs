@@ -5,7 +5,7 @@ namespace ElectionApi.Repositories
 {
     public class CandidateRepository : Repository<Candidate>, ICandidateRepository
     {
-        public CandidateRepository(IMongoDatabase database) : base(database)
+        public CandidateRepository(IMongoContext context) : base(context.Database)
         {
         }
     }

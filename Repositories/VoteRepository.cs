@@ -6,10 +6,8 @@ namespace ElectionApi.Repositories
 {
     public class VoteRepository : Repository<Vote>, IVoteRepository
     {
-        private readonly IMongoCollection<Vote> _collection;
-        public VoteRepository(IMongoDatabase database) : base(database)
+        public VoteRepository(IMongoContext context) : base(context.Database)
         {
-             _collection = database.GetCollection<Vote>(typeof(Vote).Name);
         }
         public virtual Task<List<BsonDocument>> CountByCandidateAsync(FilterDefinition<Vote> filterExpression)
         {

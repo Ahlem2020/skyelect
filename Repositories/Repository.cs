@@ -8,7 +8,7 @@ namespace ElectionApi.Repositories
 {
     public class Repository<TDocument> : IRepository<TDocument> where TDocument : IDocument
     {
-        private readonly IMongoCollection<TDocument> _collection;
+        protected readonly IMongoCollection<TDocument> _collection;
 
         public Repository(IMongoDatabase database)
         {
@@ -379,6 +379,32 @@ namespace ElectionApi.Repositories
                 .ToListAsync();
             });
 
+        }
+
+        // Convenience methods for CRUD operations
+        public virtual async Task<IEnumerable<TDocument>> GetAllAsync()
+        {
+            return await _collection.Find(_ => true).ToListAsync();
+        }
+
+        public virtual async Task<TDocument?> GetByIdAsync(string id)
+        {
+            return await FindByIdAsync(id);
+        }
+
+        public virtual async Task CreateAsync(TDocument document)
+        {
+            await InsertOneAsync(document);
+        }
+
+        public virtual async Task UpdateAsync(TDocument document)
+        {
+            await ReplaceOneAsync(document);
+        }
+
+        public virtual async Task DeleteAsync(string id)
+        {
+            await DeleteByIdAsync(id);
         }
     }
 }

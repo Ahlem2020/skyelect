@@ -11,5 +11,6 @@ namespace ElectionApi.ViewModels
         [Required]
         public long Registered { get; set; }
         public string? Province { get; set; }
+        public string? CountryId { get; set; }
     }
 }

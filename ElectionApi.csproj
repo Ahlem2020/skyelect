@@ -7,12 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Tests\**" />
+    <Content Remove="Tests\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AspNetCore.Identity.MongoDbCore" Version="3.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.10" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
     <PackageReference Include="MongoDB.Driver" Version="3.4.2" />
+    <PackageReference Include="MongoDbGenericRepository" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
 
 </Project>

@@ -7,5 +7,7 @@
         public string? Code { get; set; }
         public long Registered { get; set; }
         public string? Province { get; set; }
+        public string? CountryId { get; set; }
+        public string? CountryName { get; set; }
     }
 }

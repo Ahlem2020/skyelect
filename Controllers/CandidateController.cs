@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using MongoDB.Driver;
-using MongoDB.Bson; // Ajout de l'import nécessaire
+using MongoDB.Bson; // Ajout de l'import nï¿½cessaire
 using ElectionApi.QueueModels.Votes;
 using ElectionApi.QueueServices;
 using ElectionApi.Repositories;
@@ -40,6 +40,7 @@ public class CandidateController : ControllerBase
             LastName = x.LastName,
             FirstName = x.FirstName,
             Part = x.Part,
+            Image = x.Image,
             TotalVote = results.Where(z => (int)z["_id"]["candidateId"] == x.OriginalId).Sum(z => (long)z["totalVote"])
         });
         return Ok(response);

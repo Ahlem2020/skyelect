@@ -9,6 +9,7 @@ namespace ElectionApi.Services
         ICandidateRepository Candidates { get; }
         IOfficeRepository Offices { get; }
         IVoteRepository Votes { get; }
+        ICountryRepository Countries { get; }
     }
 
     public class DataService : IDataService
@@ -21,8 +22,9 @@ namespace ElectionApi.Services
         }
 
         public IMongoDatabase Database => _dbContext.Database;
-        public ICandidateRepository Candidates => new CandidateRepository(_dbContext.Database);
-        public IOfficeRepository Offices => new OfficeRepository(_dbContext.Database);
-        public IVoteRepository Votes => new VoteRepository(_dbContext.Database);
+        public ICandidateRepository Candidates => new CandidateRepository(_dbContext);
+        public IOfficeRepository Offices => new OfficeRepository(_dbContext);
+        public IVoteRepository Votes => new VoteRepository(_dbContext);
+        public ICountryRepository Countries => new CountryRepository(_dbContext);
     }
 }
